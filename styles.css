@@ -568,10 +568,11 @@ a {
   padding: clamp(1rem, 3vw, 2rem);
   display: grid;
   place-items: center;
-  overflow: hidden;
-  color: var(--ink);
-  background: var(--white);
-  box-shadow: 0.55rem 0.55rem 0 rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  color: var(--white);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .org-chart svg {
@@ -581,6 +582,82 @@ a {
 
 .org-chart .node {
   cursor: pointer;
+}
+
+.org-chart svg {
+  overflow: visible;
+}
+
+.org-chart .node rect,
+.org-chart .node polygon,
+.org-chart .node circle,
+.org-chart .node ellipse {
+  fill: var(--red) !important;
+  stroke: var(--white) !important;
+  stroke-width: 4px !important;
+  filter: drop-shadow(0.28rem 0.28rem 0 rgba(0, 0, 0, 0.22));
+  transition: fill 160ms ease, transform 160ms ease;
+}
+
+.org-chart .node:nth-of-type(2n) rect,
+.org-chart .node:nth-of-type(2n) polygon,
+.org-chart .node:nth-of-type(2n) circle,
+.org-chart .node:nth-of-type(2n) ellipse {
+  fill: var(--purple) !important;
+}
+
+.org-chart .node:nth-of-type(3n) rect,
+.org-chart .node:nth-of-type(3n) polygon,
+.org-chart .node:nth-of-type(3n) circle,
+.org-chart .node:nth-of-type(3n) ellipse {
+  fill: var(--blue) !important;
+}
+
+.org-chart .node:focus-visible rect,
+.org-chart .node:focus-visible polygon,
+.org-chart .node:focus-visible circle,
+.org-chart .node:focus-visible ellipse,
+.org-chart .node:hover rect,
+.org-chart .node:hover polygon,
+.org-chart .node:hover circle,
+.org-chart .node:hover ellipse {
+  fill: var(--green) !important;
+}
+
+.org-chart .nodeLabel,
+.org-chart .node text,
+.org-chart .label,
+.org-chart .label text {
+  color: var(--white) !important;
+  fill: var(--white) !important;
+  font-family: var(--font-display) !important;
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase;
+}
+
+.org-chart .edgePath path,
+.org-chart path.flowchart-link {
+  stroke: var(--white) !important;
+  stroke-width: 5px !important;
+  filter: drop-shadow(0.16rem 0.16rem 0 rgba(0, 0, 0, 0.45));
+}
+
+.org-chart marker path,
+.org-chart .arrowMarkerPath,
+.org-chart #flowchart-pointEnd path {
+  fill: var(--white) !important;
+  stroke: var(--white) !important;
+  stroke-width: 2px !important;
+  transform: scale(1.22);
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0.12rem 0.12rem 0 rgba(0, 0, 0, 0.4));
+}
+
+.org-chart marker {
+  overflow: visible;
 }
 
 .mermaidTooltip {
