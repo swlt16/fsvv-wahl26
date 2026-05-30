@@ -18,6 +18,7 @@
         <div class="nav-links">
           <a href="#programm">Programm</a>
           <a href="#wahl">Wahl</a>
+          <a href="#organigramm">Orga</a>
           <a href="#mitmachen">Mitmachen</a>
         </div>
       </nav>
@@ -121,6 +122,42 @@
         </div>
       </section>
 
+      <section class="poster-section section-red org-section" id="organigramm" aria-labelledby="org-title">
+        <div class="section-heading">
+          <p>Wie wir arbeiten</p>
+          <h2 id="org-title">Organigramm als einfache Struktur</h2>
+        </div>
+        <div class="org-layout">
+          <div class="org-copy">
+            <p>Placeholder: Das Organigramm zeigt fünf Bereiche und ihre einfachen Beziehungen. Inhaltlich kann hier spaeter stehen, wie Plenum, Koordination, Fachschaften und Arbeitsgruppen zusammenspielen.</p>
+            <pre class="org-code"><code>Plenum -> Koordination
+Plenum -> Fachschaften
+Koordination -> Arbeitsgruppen
+Fachschaften -> Campus
+Arbeitsgruppen -> Campus</code></pre>
+            <article class="org-detail" id="orgDetail" aria-live="polite">
+              <span id="orgDetailKicker">Anklicken</span>
+              <h3 id="orgDetailTitle">Element im Organigramm wählen</h3>
+              <p id="orgDetailText">Klicke auf einen Knoten im Organigramm, um hier einen kurzen Platzhaltertext zum Bereich zu sehen.</p>
+            </article>
+          </div>
+          <pre class="mermaid org-chart">
+flowchart TB
+  Plenum["FSVV-Plenum"]
+  Koordination["Koordination"]
+  Fachschaften["Fachschaften"]
+  Arbeitsgruppen["Arbeitsgruppen"]
+  Campus["Campus & Studierende"]
+
+  Plenum --> Koordination
+  Plenum --> Fachschaften
+  Koordination --> Arbeitsgruppen
+  Fachschaften --> Campus
+  Arbeitsgruppen --> Campus
+          </pre>
+        </div>
+      </section>
+
       <section class="poster-section section-blue" id="mitmachen" aria-labelledby="join-title">
         <div class="join-copy">
           <p class="stamp">Basisdemokratisch. Unabhängig. Laut.</p>
@@ -153,6 +190,7 @@
       </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

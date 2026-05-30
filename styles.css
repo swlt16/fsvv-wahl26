@@ -388,6 +388,16 @@ a {
 
 .section-green::after {
   z-index: 1;
+  background: var(--red);
+}
+
+.section-red {
+  background: var(--red);
+  padding-top: clamp(5rem, 9vw, 8rem);
+}
+
+.section-red::after {
+  z-index: 1;
   background: var(--blue);
 }
 
@@ -490,6 +500,93 @@ a {
   text-align: center;
 }
 
+.org-layout {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.55fr) minmax(22rem, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.org-copy p {
+  max-width: 34rem;
+  margin: 0 0 1.2rem;
+  font-size: clamp(1rem, 1.45vw, 1.2rem);
+  line-height: 1.38;
+  font-weight: 800;
+}
+
+.org-code {
+  margin: 0;
+  padding: 1rem;
+  overflow-x: auto;
+  color: var(--ink);
+  background: var(--white);
+  box-shadow: 0.45rem 0.45rem 0 rgba(0, 0, 0, 0.18);
+}
+
+.org-code code {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.org-detail {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  color: var(--ink);
+  background: var(--white);
+  box-shadow: 0.45rem 0.45rem 0 rgba(0, 0, 0, 0.18);
+}
+
+.org-detail span {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  color: var(--red);
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.org-detail h3 {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.org-detail p {
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.org-chart {
+  min-height: 25rem;
+  margin: 0;
+  padding: clamp(1rem, 3vw, 2rem);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--white);
+  box-shadow: 0.55rem 0.55rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.org-chart svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.org-chart .node {
+  cursor: pointer;
+}
+
+.mermaidTooltip {
+  display: none !important;
+}
+
 .faq-section {
   position: relative;
   display: grid;
@@ -557,6 +654,7 @@ a {
 
   .hero,
   .vote-band,
+  .org-layout,
   .section-blue,
   .faq-section {
     grid-template-columns: 1fr;
