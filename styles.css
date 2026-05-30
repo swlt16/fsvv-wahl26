@@ -62,6 +62,23 @@ a {
   transform: rotate(-2deg);
 }
 
+.brand-lockup {
+  display: grid;
+  gap: 0.15rem;
+  justify-items: center;
+}
+
+.brand-lockup p {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(0.82rem, 1.35vw, 1.1rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 0.12rem 0.14rem 0 rgba(0, 0, 0, 0.16);
+  white-space: nowrap;
+}
+
 .brand img {
   display: block;
   width: 100%;
