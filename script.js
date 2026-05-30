@@ -7,37 +7,40 @@ const orgDetails = {
   Studierende: {
     kicker: "Basis",
     title: "Alle Studierende",
-    text: "Placeholder: Alle Studierenden sind die Grundlage der studentischen Selbstverwaltung und koennen sich in ihren Fachschaften einbringen.",
+    text: "Placeholder: Alle Studierenden sind die Grundlage der studentischen Selbstverwaltung und können sich in ihren Fachschaften einbringen.",
   },
   Fachschaften: {
     kicker: "Vertretung",
     title: "Fachschaften",
-    text: "Placeholder: Die Fachschaften vertreten die Studierenden in den Studiengaengen und bringen Themen in die FSVV ein.",
+    text: "Placeholder: Die Fachschaften vertreten die Studierenden in den Studiengängen und bringen Themen in die FSVV ein.",
   },
   FSVV: {
     kicker: "Zusammenhang",
     title: "Fachschaftenvollversammlung (FSVV)",
-    text: "Placeholder: Die FSVV buendelt Perspektiven aus den Fachschaften und stimmt gemeinsame hochschulpolitische Positionen ab.",
+    text: "Placeholder: Die FSVV bündelt Perspektiven aus den Fachschaften und stimmt gemeinsame hochschulpolitische Positionen ab.",
   },
   StuRa: {
     kicker: "Gremium",
     title: "Studierendenrat",
-    text: "Placeholder: Im Studierendenrat werden zentrale studentische Entscheidungen und politische Anliegen auf Universitaetsebene behandelt.",
+    text: "Placeholder: Im Studierendenrat werden zentrale studentische Entscheidungen und politische Anliegen auf Universitätsebene behandelt.",
   },
   Senat: {
-    kicker: "Universitaet",
+    kicker: "Universität",
     title: "Senat der Universität",
-    text: "Placeholder: Im Senat werden wichtige universitaere Fragen verhandelt; studentische Stimmen bringen dort Perspektiven aus dem Studium ein.",
+    text: "Placeholder: Im Senat werden wichtige universitäre Fragen verhandelt; studentische Stimmen bringen dort Perspektiven aus dem Studium ein.",
   },
 };
 
 const orgLabelToId = {
   "Alle Studierende": "Studierende",
+  AlleStudierende: "Studierende",
   Fachschaften: "Fachschaften",
   "Fachschaftenvollversammlung (FSVV)": "FSVV",
+  "Fachschaftenvollversammlung(FSVV)": "FSVV",
   FSVV: "FSVV",
   Studierendenrat: "StuRa",
   "Senat der Universität": "Senat",
+  SenatderUniversität: "Senat",
 };
 
 mailVote.addEventListener("click", () => {
@@ -67,9 +70,15 @@ const hydrateOrgChart = () => {
 
   orgChart.dataset.clickable = "true";
 
+  const getNodeIdFromLabel = (label) => {
+    const normalizedLabel = label.trim().replace(/\s+/g, " ");
+    const compactLabel = normalizedLabel.replace(/\s/g, "");
+
+    return orgLabelToId[normalizedLabel] || orgLabelToId[compactLabel];
+  };
+
   const activateNode = (node) => {
-    const label = node.textContent.trim().replace(/\s+/g, " ");
-    const nodeId = orgLabelToId[label];
+    const nodeId = getNodeIdFromLabel(node.textContent);
 
     if (nodeId) {
       window.showOrgInfo(nodeId);
