@@ -4,39 +4,40 @@ const orgDetailTitle = document.querySelector("#orgDetailTitle");
 const orgDetailText = document.querySelector("#orgDetailText");
 
 const orgDetails = {
-  Plenum: {
-    kicker: "Zentrum",
-    title: "FSVV-Plenum",
-    text: "Placeholder: Das Plenum ist der Ort, an dem gemeinsame Positionen diskutiert und Entscheidungen basisdemokratisch getroffen werden.",
-  },
-  Koordination: {
-    kicker: "Verbindung",
-    title: "Koordination",
-    text: "Placeholder: Die Koordination haelt Termine, Kommunikation und offene Aufgaben zusammen, damit Beschluesse praktisch werden.",
+  Studierende: {
+    kicker: "Basis",
+    title: "Alle Studierende",
+    text: "Placeholder: Alle Studierenden sind die Grundlage der studentischen Selbstverwaltung und koennen sich in ihren Fachschaften einbringen.",
   },
   Fachschaften: {
-    kicker: "Basis",
+    kicker: "Vertretung",
     title: "Fachschaften",
-    text: "Placeholder: Die Fachschaften bringen Themen aus den Studiengaengen ein und tragen Informationen zurueck in ihre Faecher.",
+    text: "Placeholder: Die Fachschaften vertreten die Studierenden in den Studiengaengen und bringen Themen in die FSVV ein.",
   },
-  Arbeitsgruppen: {
-    kicker: "Praxis",
-    title: "Arbeitsgruppen",
-    text: "Placeholder: Arbeitsgruppen kuemmern sich um konkrete Themen wie Kampagnen, Veranstaltungen, Oeffentlichkeitsarbeit oder Hochschulpolitik.",
+  FSVV: {
+    kicker: "Zusammenhang",
+    title: "Fachschaftenvollversammlung (FSVV)",
+    text: "Placeholder: Die FSVV buendelt Perspektiven aus den Fachschaften und stimmt gemeinsame hochschulpolitische Positionen ab.",
   },
-  Campus: {
-    kicker: "Ziel",
-    title: "Campus & Studierende",
-    text: "Placeholder: Am Ende soll die Arbeit auf dem Campus ankommen: sichtbar, nutzbar und offen fuer alle Studierenden.",
+  StuRa: {
+    kicker: "Gremium",
+    title: "Studierendenrat",
+    text: "Placeholder: Im Studierendenrat werden zentrale studentische Entscheidungen und politische Anliegen auf Universitaetsebene behandelt.",
+  },
+  Senat: {
+    kicker: "Universitaet",
+    title: "Senat der Universität",
+    text: "Placeholder: Im Senat werden wichtige universitaere Fragen verhandelt; studentische Stimmen bringen dort Perspektiven aus dem Studium ein.",
   },
 };
 
 const orgLabelToId = {
-  "FSVV-Plenum": "Plenum",
-  Koordination: "Koordination",
+  "Alle Studierende": "Studierende",
   Fachschaften: "Fachschaften",
-  Arbeitsgruppen: "Arbeitsgruppen",
-  "Campus & Studierende": "Campus",
+  "Fachschaftenvollversammlung (FSVV)": "FSVV",
+  FSVV: "FSVV",
+  Studierendenrat: "StuRa",
+  "Senat der Universität": "Senat",
 };
 
 mailVote.addEventListener("click", () => {
