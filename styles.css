@@ -169,7 +169,7 @@ a {
   width: min(34rem, 86%);
   height: auto;
   margin: -1.2rem auto 0;
-  filter: drop-shadow(0.55rem 0.6rem 0 rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(0.28rem 0.32rem 0 rgba(0, 0, 0, 0.12));
   transform: rotate(-1.5deg);
 }
 
@@ -785,7 +785,7 @@ a {
 
   .hero {
     padding-top: 7rem;
-    padding-bottom: 9rem;
+    padding-bottom: 5rem;
   }
 
   .message-block {
@@ -798,8 +798,8 @@ a {
   }
 
   .vote-band {
-    margin-top: -6rem;
-    padding-top: 10rem;
+    margin-top: -11rem;
+    padding-top: 13rem;
   }
 
   .vote-copy {
@@ -834,8 +834,13 @@ a {
     gap: 0.45rem;
   }
 
-  .message-block h1 {
-    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  .hero {
+    padding-bottom: 3.5rem;
+  }
+
+  .vote-band {
+    margin-top: -13rem;
+    padding-top: 14rem;
   }
 
   .vote-card {
