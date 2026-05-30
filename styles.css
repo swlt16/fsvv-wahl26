@@ -149,17 +149,17 @@ a {
 }
 
 .hero-logo {
-  width: min(32rem, 78%);
-  margin: -0.6rem auto 1.5rem;
+  width: min(26rem, 68%);
+  margin: -0.6rem auto 0.2rem;
 }
 
-.message-block h1 {
-  margin: 0;
-  font-size: clamp(1.75rem, 3.35vw, 3.4rem);
-  font-family: var(--font-display);
-  letter-spacing: 0;
-  line-height: 1.18;
-  font-weight: 900;
+.hero-beaver {
+  display: block;
+  width: min(30rem, 78%);
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0.55rem 0.6rem 0 rgba(0, 0, 0, 0.18));
+  transform: rotate(1.5deg);
 }
 
 .hero-note {
