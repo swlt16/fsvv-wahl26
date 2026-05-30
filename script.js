@@ -105,6 +105,8 @@ const hydrateOrgChart = () => {
 
   makeNodesFocusable();
   hideMermaidTooltips();
+  shortenArrowEnds(orgChart);
+  orgChart.classList.add("is-ready");
   new MutationObserver(makeNodesFocusable).observe(orgChart, {
     childList: true,
     subtree: true,
@@ -117,14 +119,45 @@ const hideMermaidTooltips = () => {
   });
 };
 
-document.addEventListener("DOMContentLoaded", hydrateOrgChart);
-window.addEventListener("load", hydrateOrgChart);
-window.setTimeout(hydrateOrgChart, 1000);
-window.setTimeout(hideMermaidTooltips, 1600);
+const shortenArrowEnds = (orgChart) => {
+  orgChart.querySelectorAll("path.flowchart-link").forEach((path) => {
+    const commands = path.getAttribute("d")?.match(/[ML][^ML]+/g);
+
+    if (!commands || commands.length < 2 || path.dataset.shortened === "true") {
+      return;
+    }
+
+    const parsePoint = (command) => {
+      const coords = command.slice(1).split(",").map(Number);
+      return { command: command[0], x: coords[0], y: coords[1] };
+    };
+
+    const points = commands.map(parsePoint);
+    const end = points.at(-1);
+    const previous = points.at(-2);
+    const dx = end.x - previous.x;
+    const dy = end.y - previous.y;
+    const length = Math.hypot(dx, dy);
+
+    if (!length) {
+      return;
+    }
+
+    const gap = 11;
+    end.x -= (dx / length) * gap;
+    end.y -= (dy / length) * gap;
+
+    path.setAttribute(
+      "d",
+      points.map((point) => `${point.command}${point.x.toFixed(3)},${point.y.toFixed(3)}`).join(""),
+    );
+    path.dataset.shortened = "true";
+  });
+};
 
 if (window.mermaid) {
   window.mermaid.initialize({
-    startOnLoad: true,
+    startOnLoad: false,
     theme: "base",
     themeVariables: {
       background: "#ffffff",
@@ -144,4 +177,11 @@ if (window.mermaid) {
       rankSpacing: 58,
     },
   });
+
+  window.mermaid
+    .run({ querySelector: ".mermaid" })
+    .then(hydrateOrgChart)
+    .catch(hydrateOrgChart);
+} else {
+  hydrateOrgChart();
 }
