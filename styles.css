@@ -62,8 +62,7 @@ a {
   transform: rotate(-2deg);
 }
 
-.brand img,
-.hero-logo {
+.brand img {
   display: block;
   width: 100%;
   height: auto;
@@ -148,18 +147,13 @@ a {
   text-align: center;
 }
 
-.hero-logo {
-  width: min(26rem, 68%);
-  margin: -0.6rem auto 0.2rem;
-}
-
 .hero-beaver {
   display: block;
-  width: min(30rem, 78%);
+  width: min(34rem, 86%);
   height: auto;
-  margin: 0 auto;
+  margin: -1.2rem auto 0;
   filter: drop-shadow(0.55rem 0.6rem 0 rgba(0, 0, 0, 0.18));
-  transform: rotate(1.5deg);
+  transform: rotate(-1.5deg);
 }
 
 .hero-note {
@@ -243,6 +237,7 @@ a {
 }
 
 .vote-card {
+  position: relative;
   display: grid;
   grid-template-columns: auto minmax(6rem, 10rem);
   grid-template-areas:
@@ -336,6 +331,18 @@ a {
   transform: rotate(-45deg);
 }
 
+.mail-beaver {
+  position: absolute;
+  z-index: 1;
+  right: clamp(-2.2rem, -3vw, -1rem);
+  bottom: clamp(-1.8rem, -2vw, -0.8rem);
+  width: clamp(4.4rem, 7vw, 6.6rem);
+  height: auto;
+  pointer-events: none;
+  transform: rotate(5deg);
+  filter: drop-shadow(0.35rem 0.35rem 0 rgba(0, 0, 0, 0.18));
+}
+
 .poster-section {
   position: relative;
   padding: clamp(3.2rem, 7vw, 6rem) clamp(1.25rem, 5vw, 4.2rem);
@@ -369,6 +376,22 @@ a {
   line-height: 0.95;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.heading-with-icon {
+  display: grid;
+  grid-template-columns: clamp(5rem, 12vw, 9rem) minmax(0, 1fr);
+  gap: clamp(0.9rem, 2.4vw, 1.6rem);
+  align-items: center;
+  max-width: 68rem;
+}
+
+.heading-with-icon img {
+  width: 100%;
+  height: auto;
+  align-self: start;
+  filter: drop-shadow(0.24rem 0.28rem 0 rgba(0, 0, 0, 0.2));
+  transform: rotate(-3deg);
 }
 
 .section-purple {
