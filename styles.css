@@ -1,0 +1,639 @@
+:root {
+  color-scheme: light;
+  --white: #fff;
+  --ink: #10252b;
+  --green: #42a964;
+  --blue: #328eac;
+  --orange: #ff9514;
+  --purple: #70308e;
+  --red: #ed1c24;
+  --poster: var(--green);
+  --wave: var(--blue);
+  --shadow: rgba(10, 26, 31, 0.24);
+  --font-display: "Barlow Condensed", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  --font-text: "Barlow", Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f4f7f2;
+  color: var(--white);
+  font-family: var(--font-text);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.campaign {
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--poster);
+}
+
+.topbar {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: clamp(0.75rem, 2vw, 1.4rem) clamp(1rem, 4vw, 3rem);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+}
+
+.brand {
+  display: inline-flex;
+  width: clamp(8rem, 18vw, 16rem);
+  transform: rotate(-2deg);
+}
+
+.brand img,
+.hero-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: invert(1) drop-shadow(0.18rem 0.24rem 0 rgba(0, 0, 0, 0.12));
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.55rem;
+}
+
+.nav-links a,
+.action-list a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px solid currentColor;
+  padding: 0.55rem 0.8rem;
+  box-shadow: 0.28rem 0.28rem 0 rgba(0, 0, 0, 0.16);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.action-list a:hover,
+.action-list a:focus-visible {
+  transform: translate(-0.12rem, -0.12rem);
+  box-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.18);
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.9fr) minmax(18rem, 1.1fr);
+  gap: clamp(1rem, 4vw, 4rem);
+  min-height: 62vh;
+  padding: clamp(6.5rem, 12vw, 10rem) clamp(1.25rem, 5vw, 4.2rem) 8rem;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -10vw;
+  bottom: -8rem;
+  width: min(72rem, 78vw);
+  height: 18rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50% 50% 0 0 / 75% 75% 0 0;
+}
+
+.kicker {
+  margin: 0 0 1.4rem;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.reasons-list {
+  display: grid;
+  gap: 0.52rem;
+  margin: 0;
+  padding-left: 1.65rem;
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  line-height: 1.25;
+}
+
+.reasons-list li::marker {
+  font-weight: 400;
+}
+
+.message-block {
+  justify-self: end;
+  width: min(100%, 43rem);
+  text-align: center;
+}
+
+.hero-logo {
+  width: min(32rem, 78%);
+  margin: -0.6rem auto 1.5rem;
+}
+
+.message-block h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.35vw, 3.4rem);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: 1.18;
+  font-weight: 900;
+}
+
+.hero-note {
+  width: min(34rem, 100%);
+  margin: 1.25rem auto 0;
+  font-size: clamp(1rem, 1.55vw, 1.25rem);
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.vote-band {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(18rem, 1fr) minmax(18rem, 0.95fr);
+  align-items: end;
+  gap: clamp(1rem, 4vw, 3rem);
+  min-height: 34rem;
+  margin-top: -7rem;
+  padding: 12rem clamp(1.25rem, 5vw, 4.2rem) clamp(2rem, 5vw, 4rem);
+  background: var(--wave);
+}
+
+.vote-band::after,
+.poster-section::after,
+.faq-section::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8.5rem;
+  width: 112vw;
+  height: 16rem;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 0 0 / 78% 78% 0 0;
+  pointer-events: none;
+}
+
+.vote-band::after {
+  z-index: 1;
+  background: var(--purple);
+}
+
+.wave {
+  position: absolute;
+  top: -8rem;
+  left: -4vw;
+  width: 108vw;
+  height: 17rem;
+  background: var(--wave);
+  border-radius: 50% 50% 0 0 / 72% 72% 0 0;
+}
+
+.vote-copy,
+.vote-card {
+  position: relative;
+  z-index: 2;
+}
+
+.vote-copy {
+  padding-left: clamp(0rem, 5vw, 4rem);
+  text-shadow: 0 0.15rem 0 rgba(0, 0, 0, 0.08);
+}
+
+.vote-copy p,
+.vote-copy h2 {
+  margin: 0;
+  font-size: clamp(2.1rem, 5.4vw, 4.8rem);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.vote-copy span {
+  display: block;
+  max-width: 34rem;
+  margin-top: 1rem;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.vote-card {
+  display: grid;
+  grid-template-columns: auto minmax(6rem, 10rem);
+  grid-template-areas:
+    "date date"
+    "title title"
+    "qr mail";
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem 1.4rem;
+  margin-inline: auto;
+}
+
+.date {
+  grid-area: date;
+}
+
+.vote-title {
+  grid-area: title;
+}
+
+.date,
+.vote-title {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.7vw, 4.8rem);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: 0.95;
+  font-weight: 900;
+}
+
+.qr-link {
+  grid-area: qr;
+  display: inline-flex;
+  width: clamp(9rem, 18vw, 14.5rem);
+  aspect-ratio: 1;
+  padding: 0.55rem;
+  background: var(--white);
+  box-shadow: 0 0.75rem 1.4rem var(--shadow);
+  transition: transform 180ms ease;
+}
+
+.qr-link:hover,
+.qr-link:focus-visible {
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.qr {
+  width: 100%;
+  height: 100%;
+  background:
+    conic-gradient(from 90deg at 25% 25%, var(--white) 0 25%, currentColor 0 50%, var(--white) 0 75%, currentColor 0) 0 0 / 28% 28%,
+    linear-gradient(currentColor 0 0) 14% 14% / 18% 18% no-repeat,
+    linear-gradient(currentColor 0 0) 68% 14% / 18% 18% no-repeat,
+    linear-gradient(currentColor 0 0) 14% 68% / 18% 18% no-repeat,
+    repeating-linear-gradient(90deg, currentColor 0 9%, transparent 9% 18%),
+    repeating-linear-gradient(0deg, transparent 0 8%, currentColor 8% 14%, transparent 14% 22%);
+  color: var(--wave);
+  image-rendering: pixelated;
+}
+
+.mail-vote {
+  position: relative;
+  grid-area: mail;
+  display: grid;
+  place-items: center;
+  width: clamp(6.2rem, 11vw, 9.5rem);
+  aspect-ratio: 1;
+  border: 0;
+  background: var(--white);
+  color: transparent;
+  font-size: clamp(0.85rem, 1.45vw, 1.1rem);
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  cursor: pointer;
+  transform: rotate(45deg);
+  box-shadow: 0 0.75rem 1.3rem var(--shadow);
+  transition: transform 180ms ease;
+}
+
+.mail-vote:hover,
+.mail-vote:focus-visible,
+.mail-vote.is-popped {
+  transform: rotate(45deg) scale(1.07);
+}
+
+.mail-vote::after {
+  content: "Jetzt\A Briefwahl\A beantragen";
+  white-space: pre;
+  color: var(--ink);
+  transform: rotate(-45deg);
+}
+
+.poster-section {
+  position: relative;
+  padding: clamp(3.2rem, 7vw, 6rem) clamp(1.25rem, 5vw, 4.2rem);
+}
+
+.poster-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.section-heading {
+  max-width: 60rem;
+  margin-bottom: clamp(1.8rem, 4vw, 3.5rem);
+}
+
+.section-heading p,
+.stamp {
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.section-heading h2,
+.join-copy h2,
+.faq-section h2 {
+  margin: 0;
+  font-size: clamp(2.6rem, 6vw, 6rem);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: 0.95;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.section-purple {
+  background: var(--purple);
+  padding-top: clamp(5rem, 9vw, 8rem);
+}
+
+.section-purple::after {
+  z-index: 1;
+  background: var(--green);
+}
+
+.section-green {
+  background: var(--green);
+  padding-top: clamp(5rem, 9vw, 8rem);
+}
+
+.section-green::after {
+  z-index: 1;
+  background: var(--blue);
+}
+
+.section-blue {
+  display: grid;
+  grid-template-columns: minmax(18rem, 1fr) minmax(16rem, 0.55fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: center;
+  background: var(--blue);
+  padding-top: clamp(5rem, 9vw, 8rem);
+}
+
+.section-blue::after {
+  z-index: 1;
+  background: var(--orange);
+}
+
+.issue-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.issue,
+.timeline article,
+.faq-list details {
+  border: 4px solid var(--white);
+  padding: clamp(1rem, 2vw, 1.4rem);
+  box-shadow: 0.45rem 0.45rem 0 rgba(0, 0, 0, 0.18);
+}
+
+.issue span {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: 0.8;
+  font-weight: 900;
+}
+
+.issue h3,
+.timeline h3 {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.issue p,
+.timeline p,
+.join-copy p,
+.faq-list p {
+  margin: 0;
+  font-size: clamp(1rem, 1.45vw, 1.2rem);
+  line-height: 1.38;
+  font-weight: 800;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.timeline time {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--green);
+  background: var(--white);
+  padding: 0.4rem 0.55rem;
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+
+.join-copy {
+  max-width: 58rem;
+}
+
+.join-copy p:last-child {
+  max-width: 46rem;
+  margin-top: 1.2rem;
+}
+
+.action-list {
+  display: grid;
+  gap: 0.85rem;
+  align-content: center;
+}
+
+.action-list a {
+  display: block;
+  text-align: center;
+}
+
+.faq-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(16rem, 0.55fr) minmax(18rem, 1fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: start;
+  padding: clamp(3.2rem, 7vw, 6rem) clamp(1.25rem, 5vw, 4.2rem);
+  background: var(--orange);
+}
+
+.faq-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.faq-section::after {
+  bottom: auto;
+  top: -8.5rem;
+  z-index: 1;
+  background: var(--orange);
+}
+
+.faq-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-list details {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-family: var(--font-display);
+  letter-spacing: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.faq-list p {
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 980px) {
+  .issue-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .topbar {
+    position: absolute;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    max-width: 14rem;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.55rem;
+  }
+
+  .hero,
+  .vote-band,
+  .section-blue,
+  .faq-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 7rem;
+    padding-bottom: 9rem;
+  }
+
+  .message-block {
+    justify-self: center;
+    order: -1;
+  }
+
+  .reasons-list {
+    max-width: 34rem;
+  }
+
+  .vote-band {
+    margin-top: -6rem;
+    padding-top: 10rem;
+  }
+
+  .vote-copy {
+    padding-left: 0;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand {
+    width: 7.6rem;
+  }
+
+  .nav-links {
+    gap: 0.4rem;
+  }
+
+  .nav-links a {
+    border-width: 2px;
+    box-shadow: 0.18rem 0.18rem 0 rgba(0, 0, 0, 0.16);
+  }
+
+  .kicker {
+    max-width: 10ch;
+  }
+
+  .reasons-list {
+    font-size: 1rem;
+    gap: 0.45rem;
+  }
+
+  .message-block h1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+  }
+
+  .vote-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "date"
+      "title"
+      "qr"
+      "mail";
+    justify-items: start;
+    width: 100%;
+  }
+
+  .mail-vote {
+    justify-self: center;
+    margin-top: -1rem;
+  }
+
+  .issue-grid {
+    grid-template-columns: 1fr;
+  }
+}
