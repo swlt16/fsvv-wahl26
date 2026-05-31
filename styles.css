@@ -746,6 +746,30 @@ a {
   transform: rotate(-4deg);
   transform-box: fill-box;
   transform-origin: center;
+  animation: org-beaver-emerge 520ms cubic-bezier(0.2, 1.25, 0.34, 1) both;
+}
+
+@keyframes org-beaver-emerge {
+  0% {
+    opacity: 0;
+    transform: translateY(2.1rem) rotate(-4deg) scale(0.86);
+  }
+
+  62% {
+    opacity: 1;
+    transform: translateY(-0.24rem) rotate(-4deg) scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-4deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .org-selected-beaver {
+    animation: none;
+  }
 }
 
 .org-chart .edgePath path,
