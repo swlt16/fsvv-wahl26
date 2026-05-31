@@ -37,6 +37,7 @@ const orgLabelToId = {
   Fachschaften: "Fachschaften",
   "Fachschaftenvollversammlung (FSVV)": "FSVV",
   "Fachschaftenvollversammlung(FSVV)": "FSVV",
+  Fachschaftenvollversammlung: "FSVV",
   FSVV: "FSVV",
   Studierendenrat: "StuRa",
   "Senat der Universität": "Senat",
@@ -120,6 +121,7 @@ const hydrateOrgChart = () => {
 
   prepareNodes();
   hideMermaidTooltips();
+  addFsvvLogoToOrgNode(orgChart);
   shortenArrowEnds(orgChart);
   orgChart.classList.add("is-ready");
   new MutationObserver(prepareNodes).observe(orgChart, {
@@ -174,6 +176,7 @@ const widenPrimaryOrgNodes = (orgChart) => {
   const primaryLabels = new Set([
     "Alle Studierende",
     "Fachschaften",
+    "Fachschaftenvollversammlung",
     "Fachschaftenvollversammlung(FSVV)",
   ]);
   const shouldWiden = window.matchMedia("(max-width: 560px)").matches;
@@ -203,6 +206,45 @@ const widenPrimaryOrgNodes = (orgChart) => {
     rect.setAttribute("width", (baseWidth + extraWidth).toFixed(3));
     rect.setAttribute("x", (baseX - extraWidth / 2).toFixed(3));
   });
+};
+
+const addFsvvLogoToOrgNode = (orgChart) => {
+  const fsvvNode = [...orgChart.querySelectorAll(".node")].find((node) =>
+    node.textContent.includes("Fachschaftenvollversammlung"),
+  );
+
+  if (!fsvvNode || fsvvNode.dataset.logoAdded === "true") {
+    return;
+  }
+
+  const rect = fsvvNode.querySelector("rect");
+
+  if (!rect) {
+    return;
+  }
+
+  const x = Number(rect.getAttribute("x"));
+  const y = Number(rect.getAttribute("y"));
+  const width = Number(rect.getAttribute("width"));
+  const height = Number(rect.getAttribute("height"));
+
+  if (![x, y, width, height].every(Number.isFinite)) {
+    return;
+  }
+
+  const logoWidth = Math.min(82, width * 0.54);
+  const logoHeight = logoWidth * (321 / 1065);
+  const logo = document.createElementNS("http://www.w3.org/2000/svg", "image");
+
+  logo.setAttribute("href", "assets/fsvv-logo.png");
+  logo.setAttribute("x", (x + (width - logoWidth) / 2).toFixed(3));
+  logo.setAttribute("y", (y + height - logoHeight - 7).toFixed(3));
+  logo.setAttribute("width", logoWidth.toFixed(3));
+  logo.setAttribute("height", logoHeight.toFixed(3));
+  logo.setAttribute("preserveAspectRatio", "xMidYMid meet");
+  logo.classList.add("org-node-logo");
+  fsvvNode.appendChild(logo);
+  fsvvNode.dataset.logoAdded = "true";
 };
 
 const positionStepArrows = () => {

@@ -797,6 +797,11 @@ a {
   text-transform: uppercase;
 }
 
+.org-node-logo {
+  filter: invert(1);
+  pointer-events: none;
+}
+
 .org-chart .edgePath path,
 .org-chart path.flowchart-link {
   stroke: var(--white) !important;
