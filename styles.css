@@ -166,8 +166,10 @@ a {
 
 .hero-beaver {
   display: block;
-  width: min(34rem, 86%);
+  width: min(26rem, 78%);
+  max-height: 42rem;
   height: auto;
+  object-fit: contain;
   margin: -1.2rem auto 0;
   filter: drop-shadow(0.28rem 0.32rem 0 rgba(0, 0, 0, 0.12));
   transform: rotate(-1.5deg);
