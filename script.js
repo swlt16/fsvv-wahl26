@@ -16,7 +16,7 @@ const orgDetails = {
   },
   FSVV: {
     kicker: "Zusammenhang",
-    title: "Fachschaftenvollversammlung (FSVV)",
+    title: "FSVV",
     text: "Die FSVV ist unabhängig, basisdemokratisch und nicht parteipolitisch. Sie bündelt Perspektiven der Fachschaften und fasst gemeinsame Beschlüsse.",
   },
   StuRa: {

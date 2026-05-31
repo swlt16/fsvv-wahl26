@@ -677,6 +677,7 @@ a {
 .org-detail {
   margin-top: 1.2rem;
   padding: 1rem;
+  min-height: 13.5rem;
   color: var(--ink);
   background: var(--white);
   box-shadow: 0.45rem 0.45rem 0 rgba(0, 0, 0, 0.18);
