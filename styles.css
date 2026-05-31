@@ -184,20 +184,6 @@ a {
   font-weight: 800;
 }
 
-.vote-band {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(18rem, 1fr) minmax(18rem, 0.95fr);
-  align-items: end;
-  gap: clamp(1rem, 4vw, 3rem);
-  min-height: 34rem;
-  margin-top: -7rem;
-  padding: 12rem clamp(1.25rem, 5vw, 4.2rem) clamp(2rem, 5vw, 4rem);
-  background: var(--wave);
-}
-
-.vote-band::after,
 .poster-section::after,
 .faq-section::after {
   content: "";
@@ -209,158 +195,6 @@ a {
   transform: translateX(-50%);
   border-radius: 50% 50% 0 0 / 78% 78% 0 0;
   pointer-events: none;
-}
-
-.vote-band::after {
-  z-index: 1;
-  background: var(--purple);
-}
-
-.wave {
-  position: absolute;
-  top: -8rem;
-  left: -4vw;
-  width: 108vw;
-  height: 17rem;
-  background: var(--wave);
-  border-radius: 50% 50% 0 0 / 72% 72% 0 0;
-}
-
-.vote-copy,
-.vote-card {
-  position: relative;
-  z-index: 2;
-}
-
-.vote-copy {
-  padding-left: clamp(0rem, 5vw, 4rem);
-  text-shadow: 0 0.15rem 0 rgba(0, 0, 0, 0.08);
-}
-
-.vote-copy p,
-.vote-copy h2 {
-  margin: 0;
-  font-size: clamp(2.1rem, 5.4vw, 4.8rem);
-  font-family: var(--font-display);
-  letter-spacing: 0;
-  line-height: 1.08;
-  font-weight: 900;
-}
-
-.vote-copy span {
-  display: block;
-  max-width: 34rem;
-  margin-top: 1rem;
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
-  line-height: 1.35;
-  font-weight: 800;
-}
-
-.vote-card {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto minmax(6rem, 10rem);
-  grid-template-areas:
-    "date date"
-    "title title"
-    "qr mail";
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem 1.4rem;
-  margin-inline: auto;
-}
-
-.date {
-  grid-area: date;
-}
-
-.vote-title {
-  grid-area: title;
-}
-
-.date,
-.vote-title {
-  margin: 0;
-  font-size: clamp(2.2rem, 4.7vw, 4.8rem);
-  font-family: var(--font-display);
-  letter-spacing: 0;
-  line-height: 0.95;
-  font-weight: 900;
-}
-
-.qr-link {
-  grid-area: qr;
-  display: inline-flex;
-  width: clamp(9rem, 18vw, 14.5rem);
-  aspect-ratio: 1;
-  padding: 0.55rem;
-  background: var(--white);
-  box-shadow: 0 0.75rem 1.4rem var(--shadow);
-  transition: transform 180ms ease;
-}
-
-.qr-link:hover,
-.qr-link:focus-visible {
-  transform: rotate(-2deg) scale(1.04);
-}
-
-.qr {
-  width: 100%;
-  height: 100%;
-  background:
-    conic-gradient(from 90deg at 25% 25%, var(--white) 0 25%, currentColor 0 50%, var(--white) 0 75%, currentColor 0) 0 0 / 28% 28%,
-    linear-gradient(currentColor 0 0) 14% 14% / 18% 18% no-repeat,
-    linear-gradient(currentColor 0 0) 68% 14% / 18% 18% no-repeat,
-    linear-gradient(currentColor 0 0) 14% 68% / 18% 18% no-repeat,
-    repeating-linear-gradient(90deg, currentColor 0 9%, transparent 9% 18%),
-    repeating-linear-gradient(0deg, transparent 0 8%, currentColor 8% 14%, transparent 14% 22%);
-  color: var(--wave);
-  image-rendering: pixelated;
-}
-
-.mail-vote {
-  position: relative;
-  grid-area: mail;
-  display: grid;
-  place-items: center;
-  width: clamp(6.2rem, 11vw, 9.5rem);
-  aspect-ratio: 1;
-  border: 0;
-  background: var(--white);
-  color: transparent;
-  font-size: clamp(0.85rem, 1.45vw, 1.1rem);
-  font-weight: 900;
-  line-height: 1.1;
-  text-align: center;
-  cursor: pointer;
-  transform: rotate(45deg);
-  box-shadow: 0 0.75rem 1.3rem var(--shadow);
-  transition: transform 180ms ease;
-}
-
-.mail-vote:hover,
-.mail-vote:focus-visible,
-.mail-vote.is-popped {
-  transform: rotate(45deg) scale(1.07);
-}
-
-.mail-vote::after {
-  content: "Jetzt\A Briefwahl\A beantragen";
-  white-space: pre;
-  color: var(--ink);
-  transform: rotate(-45deg);
-}
-
-.mail-beaver {
-  position: absolute;
-  z-index: 1;
-  right: clamp(-2.2rem, -3vw, -1rem);
-  bottom: clamp(-1.8rem, -2vw, -0.8rem);
-  width: clamp(4.4rem, 7vw, 6.6rem);
-  height: auto;
-  pointer-events: none;
-  transform: rotate(5deg);
-  filter: drop-shadow(0.2rem 0.22rem 0 rgba(0, 0, 0, 0.11));
 }
 
 .poster-section {
@@ -431,6 +265,70 @@ a {
   background: var(--green);
 }
 
+.election-call {
+  display: grid;
+  align-items: center;
+  gap: clamp(1.2rem, 3vw, 2rem);
+  background: var(--blue);
+}
+
+.election-call::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: -8.5rem;
+  width: 118vw;
+  height: 16rem;
+  background: var(--blue);
+  border-radius: 50% 50% 0 0 / 78% 78% 0 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.election-call h2 {
+  max-width: 44rem;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.15rem, 6.8vw, 6.8rem);
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.election-copy {
+  display: grid;
+  align-content: center;
+  gap: clamp(0.9rem, 2vw, 1.35rem);
+}
+
+.election-lede {
+  max-width: 34rem;
+  margin: 0;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 900;
+  line-height: 1.12;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  max-width: 35rem;
+}
+
+.tag-cloud span {
+  padding: 0.45rem 0.75rem;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  border: 3px solid currentColor;
+  box-shadow: 0.22rem 0.22rem 0 rgba(0, 0, 0, 0.16);
+}
+
 .section-green {
   background: var(--green);
   padding-top: clamp(5rem, 9vw, 8rem);
@@ -471,6 +369,16 @@ a {
 .section-blue::after {
   z-index: 1;
   background: var(--orange);
+}
+
+.section-blue.election-call::after {
+  background: var(--purple);
+}
+
+.section-blue.election-call {
+  grid-template-columns: minmax(17rem, 0.72fr) minmax(25rem, 1.12fr);
+  min-height: clamp(28rem, 50vw, 40rem);
+  padding-top: clamp(6.8rem, 9vw, 8.5rem);
 }
 
 .issue-grid {
@@ -918,12 +826,22 @@ a {
   }
 
   .hero,
-  .vote-band,
   .process-section,
   .org-layout,
   .section-blue,
   .faq-section {
     grid-template-columns: 1fr;
+  }
+
+  .section-blue.election-call {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: clamp(5.8rem, 12vw, 7rem);
+  }
+
+  .election-call h2 {
+    max-width: 100%;
+    font-size: clamp(2.65rem, 11vw, 4rem);
   }
 
   .system-flow {
@@ -956,18 +874,6 @@ a {
     max-width: 34rem;
   }
 
-  .vote-band {
-    margin-top: -11rem;
-    padding-top: 13rem;
-  }
-
-  .wave {
-    left: 50%;
-    width: 190vw;
-    transform: translateX(-50%);
-  }
-
-  .vote-band::after,
   .poster-section::after,
   .faq-section::after {
     bottom: -15rem;
@@ -975,13 +881,15 @@ a {
     height: 19rem;
   }
 
+  .election-call::before {
+    top: -8.25rem;
+    width: 190vw;
+    height: 17rem;
+  }
+
   .faq-section::after {
     top: -5.5rem;
     bottom: auto;
-  }
-
-  .vote-copy {
-    padding-left: 0;
   }
 
   .timeline {
@@ -1030,6 +938,24 @@ a {
     width: min(20rem, 64%);
   }
 
+  .election-call h2 {
+    font-size: clamp(2.35rem, 10.5vw, 3.25rem);
+  }
+
+  .election-lede {
+    font-size: 1.12rem;
+  }
+
+  .tag-cloud {
+    gap: 0.55rem;
+  }
+
+  .tag-cloud span {
+    padding: 0.36rem 0.55rem;
+    font-size: 1.08rem;
+    border-width: 2px;
+  }
+
   .heading-with-icon {
     grid-template-columns: 3.1rem minmax(0, 1fr);
     gap: 0.7rem;
@@ -1054,16 +980,6 @@ a {
     width: min(100%, 35rem);
   }
 
-  .vote-band {
-    margin-top: -13rem;
-    padding-top: 14rem;
-  }
-
-  .wave {
-    width: 205vw;
-  }
-
-  .vote-band::after,
   .poster-section::after,
   .faq-section::after {
     bottom: -16.25rem;
@@ -1071,25 +987,15 @@ a {
     height: 20rem;
   }
 
+  .election-call::before {
+    top: -8rem;
+    width: 205vw;
+    height: 17rem;
+  }
+
   .faq-section::after {
     top: -4.75rem;
     bottom: auto;
-  }
-
-  .vote-card {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "date"
-      "title"
-      "qr"
-      "mail";
-    justify-items: start;
-    width: 100%;
-  }
-
-  .mail-vote {
-    justify-self: center;
-    margin-top: -1rem;
   }
 
   .issue-grid {

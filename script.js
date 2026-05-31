@@ -1,4 +1,3 @@
-const mailVote = document.querySelector("#mailVote");
 const orgDetailKicker = document.querySelector("#orgDetailKicker");
 const orgDetailTitle = document.querySelector("#orgDetailTitle");
 const orgDetailText = document.querySelector("#orgDetailText");
@@ -43,11 +42,6 @@ const orgLabelToId = {
   "Senat der Universität": "Senat",
   SenatderUniversität: "Senat",
 };
-
-mailVote.addEventListener("click", () => {
-  mailVote.classList.add("is-popped");
-  window.setTimeout(() => mailVote.classList.remove("is-popped"), 220);
-});
 
 window.showOrgInfo = (nodeId) => {
   const detail = orgDetails[nodeId];
