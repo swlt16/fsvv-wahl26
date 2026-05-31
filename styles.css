@@ -399,16 +399,23 @@ a {
 
 .heading-with-icon {
   display: grid;
-  grid-template-columns: clamp(5rem, 12vw, 9rem) minmax(0, 1fr);
+  grid-template-columns: clamp(4.4rem, 8vw, 6.8rem) minmax(0, 1fr);
   gap: clamp(0.9rem, 2.4vw, 1.6rem);
   align-items: center;
   max-width: 68rem;
 }
 
+.heading-with-icon h2 {
+  min-width: 0;
+}
+
 .heading-with-icon img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: clamp(6.4rem, 12vw, 9.2rem);
   height: auto;
-  align-self: start;
+  justify-self: center;
+  align-self: center;
   filter: drop-shadow(0.16rem 0.18rem 0 rgba(0, 0, 0, 0.12));
   transform: rotate(-3deg);
 }
@@ -969,6 +976,21 @@ a {
 
   .hero-beaver {
     width: min(20rem, 64%);
+  }
+
+  .heading-with-icon {
+    grid-template-columns: 3.1rem minmax(0, 1fr);
+    gap: 0.7rem;
+  }
+
+  .heading-with-icon img {
+    max-height: 4.6rem;
+  }
+
+  .heading-with-icon h2 {
+    font-size: clamp(1.85rem, 7.5vw, 2.3rem);
+    overflow-wrap: normal;
+    hyphens: manual;
   }
 
   .vote-band {
