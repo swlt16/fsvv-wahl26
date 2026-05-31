@@ -113,11 +113,16 @@ const hydrateOrgChart = () => {
     });
   };
 
-  makeNodesFocusable();
+  const prepareNodes = () => {
+    makeNodesFocusable();
+    widenPrimaryOrgNodes(orgChart);
+  };
+
+  prepareNodes();
   hideMermaidTooltips();
   shortenArrowEnds(orgChart);
   orgChart.classList.add("is-ready");
-  new MutationObserver(makeNodesFocusable).observe(orgChart, {
+  new MutationObserver(prepareNodes).observe(orgChart, {
     childList: true,
     subtree: true,
   });
@@ -165,6 +170,41 @@ const shortenArrowEnds = (orgChart) => {
   });
 };
 
+const widenPrimaryOrgNodes = (orgChart) => {
+  const primaryLabels = new Set([
+    "Alle Studierende",
+    "Fachschaften",
+    "Fachschaftenvollversammlung(FSVV)",
+  ]);
+  const shouldWiden = window.matchMedia("(max-width: 560px)").matches;
+
+  orgChart.querySelectorAll(".node").forEach((node) => {
+    const label = node.textContent.trim().replace(/\s+/g, " ");
+    const compactLabel = label.replace(/\s/g, "");
+    const rect = node.querySelector("rect");
+
+    if (!rect || (!primaryLabels.has(label) && !primaryLabels.has(compactLabel))) {
+      return;
+    }
+
+    if (!rect.dataset.baseWidth || !rect.dataset.baseX) {
+      rect.dataset.baseWidth = rect.getAttribute("width");
+      rect.dataset.baseX = rect.getAttribute("x");
+    }
+
+    const baseWidth = Number(rect.dataset.baseWidth);
+    const baseX = Number(rect.dataset.baseX);
+
+    if (!Number.isFinite(baseWidth) || !Number.isFinite(baseX)) {
+      return;
+    }
+
+    const extraWidth = shouldWiden ? Math.min(44, baseWidth * 0.2) : 0;
+    rect.setAttribute("width", (baseWidth + extraWidth).toFixed(3));
+    rect.setAttribute("x", (baseX - extraWidth / 2).toFixed(3));
+  });
+};
+
 const positionStepArrows = () => {
   const flow = document.querySelector(".system-flow");
   const steps = [...document.querySelectorAll(".system-steps li")];
@@ -197,7 +237,10 @@ const positionStepArrows = () => {
 };
 
 positionStepArrows();
-window.addEventListener("resize", positionStepArrows);
+window.addEventListener("resize", () => {
+  positionStepArrows();
+  document.querySelectorAll(".org-chart").forEach(widenPrimaryOrgNodes);
+});
 window.addEventListener("load", positionStepArrows);
 document.fonts?.ready.then(positionStepArrows);
 
@@ -219,8 +262,8 @@ if (window.mermaid) {
     },
     flowchart: {
       curve: "linear",
-      nodeSpacing: 48,
-      rankSpacing: 58,
+      nodeSpacing: 68,
+      rankSpacing: 76,
     },
   });
 

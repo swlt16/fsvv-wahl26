@@ -717,7 +717,7 @@ a {
 }
 
 .org-chart {
-  min-height: 25rem;
+  min-height: 31rem;
   margin: 0;
   padding: clamp(1rem, 3vw, 2rem);
   display: grid;
@@ -736,7 +736,7 @@ a {
 }
 
 .org-chart svg {
-  max-width: 100%;
+  width: min(100%, 48rem);
   height: auto;
 }
 
@@ -791,7 +791,7 @@ a {
   color: var(--white) !important;
   fill: var(--white) !important;
   font-family: var(--font-display) !important;
-  font-size: 1.05rem !important;
+  font-size: 1.22rem !important;
   font-weight: 900 !important;
   letter-spacing: 0 !important;
   text-transform: uppercase;
@@ -1038,6 +1038,15 @@ a {
     font-size: clamp(1.85rem, 7.5vw, 2.3rem);
     overflow-wrap: normal;
     hyphens: manual;
+  }
+
+  .org-chart {
+    min-height: 28rem;
+    padding-inline: 0;
+  }
+
+  .org-chart svg {
+    width: min(100%, 35rem);
   }
 
   .vote-band {
