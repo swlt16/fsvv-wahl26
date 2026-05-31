@@ -76,6 +76,7 @@ const hydrateOrgChart = () => {
     const nodeId = getNodeIdFromLabel(node.textContent);
 
     if (nodeId) {
+      markSelectedOrgNode(orgChart, node);
       window.showOrgInfo(nodeId);
     }
   };
@@ -128,6 +129,62 @@ const hideMermaidTooltips = () => {
   document.querySelectorAll(".mermaidTooltip").forEach((tooltip) => {
     tooltip.style.setProperty("display", "none", "important");
   });
+};
+
+const removeSelectedOrgBeavers = (orgChart) => {
+  orgChart.querySelectorAll(".org-selected-beaver").forEach((beaver) => {
+    beaver.remove();
+  });
+};
+
+const positionSelectedOrgBeaver = (node) => {
+  if (!node) {
+    return;
+  }
+
+  const svg = node.closest("svg");
+  const rootLayer = svg?.querySelector("g.root");
+  const rect = node.querySelector("rect");
+
+  if (!svg || !rootLayer || !rect) {
+    return;
+  }
+
+  const x = Number(rect.getAttribute("x"));
+  const y = Number(rect.getAttribute("y"));
+  const width = Number(rect.getAttribute("width"));
+  const matrix = node.transform?.baseVal?.consolidate()?.matrix;
+  const offsetX = matrix?.e || 0;
+  const offsetY = matrix?.f || 0;
+
+  if (![x, y, width].every(Number.isFinite)) {
+    return;
+  }
+
+  svg.querySelector(".org-selected-beaver")?.remove();
+
+  const beaverWidth = Math.min(150, Math.max(118, width * 0.82));
+  const beaverHeight = beaverWidth * (459 / 768);
+  const beaver = document.createElementNS("http://www.w3.org/2000/svg", "image");
+
+  beaver.setAttribute("href", "assets/beaver-top.png");
+  beaver.setAttribute("x", (offsetX + x - 28).toFixed(3));
+  beaver.setAttribute("y", (offsetY + y - beaverHeight + 16).toFixed(3));
+  beaver.setAttribute("width", beaverWidth.toFixed(3));
+  beaver.setAttribute("height", beaverHeight.toFixed(3));
+  beaver.setAttribute("preserveAspectRatio", "xMinYMin meet");
+  beaver.classList.add("org-selected-beaver");
+  rootLayer.insertBefore(beaver, rootLayer.firstChild);
+};
+
+const markSelectedOrgNode = (orgChart, node) => {
+  orgChart.querySelectorAll(".node.is-selected").forEach((selectedNode) => {
+    selectedNode.classList.remove("is-selected");
+  });
+
+  removeSelectedOrgBeavers(orgChart);
+  node.classList.add("is-selected");
+  positionSelectedOrgBeaver(node);
 };
 
 const shortenArrowEnds = (orgChart) => {
@@ -275,7 +332,10 @@ const positionStepArrows = () => {
 positionStepArrows();
 window.addEventListener("resize", () => {
   positionStepArrows();
-  document.querySelectorAll(".org-chart").forEach(widenPrimaryOrgNodes);
+  document.querySelectorAll(".org-chart").forEach((orgChart) => {
+    widenPrimaryOrgNodes(orgChart);
+    positionSelectedOrgBeaver(orgChart.querySelector(".node.is-selected"));
+  });
 });
 window.addEventListener("load", positionStepArrows);
 document.fonts?.ready.then(positionStepArrows);

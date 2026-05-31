@@ -650,6 +650,12 @@ a {
 
 .org-chart .node {
   cursor: pointer;
+  outline: none;
+}
+
+.org-chart .node:focus,
+.org-chart .node:focus-visible {
+  outline: none;
 }
 
 .org-chart svg {
@@ -688,7 +694,11 @@ a {
 .org-chart .node:hover rect,
 .org-chart .node:hover polygon,
 .org-chart .node:hover circle,
-.org-chart .node:hover ellipse {
+.org-chart .node:hover ellipse,
+.org-chart .node.is-selected rect,
+.org-chart .node.is-selected polygon,
+.org-chart .node.is-selected circle,
+.org-chart .node.is-selected ellipse {
   fill: var(--green) !important;
 }
 
@@ -708,6 +718,14 @@ a {
 .org-node-logo {
   filter: invert(1);
   pointer-events: none;
+}
+
+.org-selected-beaver {
+  pointer-events: none;
+  filter: drop-shadow(0.12rem 0.13rem 0 rgba(0, 0, 0, 0.2));
+  transform: rotate(-4deg);
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
 .org-chart .edgePath path,
