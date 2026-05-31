@@ -371,6 +371,14 @@ a {
   background: var(--orange);
 }
 
+.join-section::after {
+  bottom: -12.5rem;
+}
+
+.join-section {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .section-blue.election-call::after {
   background: var(--purple);
 }
@@ -799,6 +807,39 @@ a {
   margin-top: 0.8rem;
 }
 
+.faq-button {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.65rem 0.85rem;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 3px solid currentColor;
+  box-shadow: 0.22rem 0.22rem 0 rgba(0, 0, 0, 0.18);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.faq-button:hover,
+.faq-button:focus-visible {
+  transform: translate(-0.08rem, -0.08rem);
+  box-shadow: 0.32rem 0.32rem 0 rgba(0, 0, 0, 0.22);
+}
+
+.faq-compact-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.faq-compact-list li + li {
+  margin-top: 0.45rem;
+}
+
 .faq-candidates {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -897,6 +938,10 @@ a {
     bottom: -15rem;
     width: 190vw;
     height: 19rem;
+  }
+
+  .join-section::after {
+    bottom: -16.5rem;
   }
 
   .election-call::before {
@@ -1003,6 +1048,10 @@ a {
     bottom: -16.25rem;
     width: 205vw;
     height: 20rem;
+  }
+
+  .join-section::after {
+    bottom: -17.4rem;
   }
 
   .election-call::before {
