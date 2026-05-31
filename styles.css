@@ -555,6 +555,27 @@ a {
   font-weight: 800;
 }
 
+.system-steps {
+  display: grid;
+  gap: 0.55rem;
+  max-width: 34rem;
+  margin: 0.3rem 0 1.25rem;
+}
+
+.system-steps span {
+  display: block;
+  padding: 0.65rem 0.8rem;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.14);
+  border: 3px solid var(--white);
+  box-shadow: 0.22rem 0.22rem 0 rgba(0, 0, 0, 0.18);
+}
+
 .org-code {
   margin: 0;
   padding: 1rem;
@@ -784,6 +805,7 @@ a {
   }
 
   .hero {
+    gap: 0.25rem;
     padding-top: 7rem;
     padding-bottom: 5rem;
   }
@@ -791,6 +813,15 @@ a {
   .message-block {
     justify-self: center;
     order: -1;
+  }
+
+  .hero-beaver {
+    width: min(25rem, 70%);
+    margin-top: -0.5rem;
+  }
+
+  .hero-note {
+    margin-top: 0.65rem;
   }
 
   .reasons-list {
@@ -835,7 +866,12 @@ a {
   }
 
   .hero {
+    gap: 0;
     padding-bottom: 3.5rem;
+  }
+
+  .hero-beaver {
+    width: min(20rem, 64%);
   }
 
   .vote-band {

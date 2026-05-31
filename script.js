@@ -7,27 +7,27 @@ const orgDetails = {
   Studierende: {
     kicker: "Basis",
     title: "Alle Studierende",
-    text: "Placeholder: Alle Studierenden sind die Grundlage der studentischen Selbstverwaltung und können sich in ihren Fachschaften einbringen.",
+    text: "Alle Studierenden können Themen in ihre Fachschaften tragen, mitdiskutieren und so studentische Selbstverwaltung mitprägen.",
   },
   Fachschaften: {
     kicker: "Vertretung",
     title: "Fachschaften",
-    text: "Placeholder: Die Fachschaften vertreten die Studierenden in den Studiengängen und bringen Themen in die FSVV ein.",
+    text: "Bis zu zwei Delegierte pro Fachschaft kommen montags in die FSVV. Themen werden aus der FSVV zurück in die Fachschaften getragen und dort offen besprochen.",
   },
   FSVV: {
     kicker: "Zusammenhang",
     title: "Fachschaftenvollversammlung (FSVV)",
-    text: "Placeholder: Die FSVV bündelt Perspektiven aus den Fachschaften und stimmt gemeinsame hochschulpolitische Positionen ab.",
+    text: "Die FSVV ist unabhängig, basisdemokratisch und nicht parteipolitisch. Sie bündelt Perspektiven der Fachschaften und fasst gemeinsame Beschlüsse.",
   },
   StuRa: {
     kicker: "Gremium",
     title: "Studierendenrat",
-    text: "Placeholder: Im Studierendenrat werden zentrale studentische Entscheidungen und politische Anliegen auf Universitätsebene behandelt.",
+    text: "Vertreter*innen im Studierendenrat sind an FSVV-Beschlüsse gebunden und stimmen dort so ab, wie es zuvor gemeinsam entschieden wurde.",
   },
   Senat: {
     kicker: "Universität",
     title: "Senat der Universität",
-    text: "Placeholder: Im Senat werden wichtige universitäre Fragen verhandelt; studentische Stimmen bringen dort Perspektiven aus dem Studium ein.",
+    text: "Auch im Senat sollen studentische Stimmen nachvollziehbar aus den Fachschaften und der FSVV kommen, statt losgelöst von der Basis zu entscheiden.",
   },
 };
 
