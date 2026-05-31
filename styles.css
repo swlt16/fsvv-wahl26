@@ -357,7 +357,7 @@ a {
   height: auto;
   pointer-events: none;
   transform: rotate(5deg);
-  filter: drop-shadow(0.35rem 0.35rem 0 rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(0.2rem 0.22rem 0 rgba(0, 0, 0, 0.11));
 }
 
 .poster-section {
@@ -407,7 +407,7 @@ a {
   width: 100%;
   height: auto;
   align-self: start;
-  filter: drop-shadow(0.24rem 0.28rem 0 rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0.16rem 0.18rem 0 rgba(0, 0, 0, 0.12));
   transform: rotate(-3deg);
 }
 
