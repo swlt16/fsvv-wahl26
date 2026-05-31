@@ -441,6 +441,14 @@ a {
   background: var(--blue);
 }
 
+.org-section::after {
+  background: var(--purple);
+}
+
+.process-section::after {
+  background: var(--blue);
+}
+
 .section-blue {
   display: grid;
   grid-template-columns: minmax(18rem, 1fr) minmax(16rem, 0.55fr);
@@ -555,15 +563,29 @@ a {
   font-weight: 800;
 }
 
-.system-steps {
+.process-section {
   display: grid;
-  gap: 0.55rem;
-  max-width: 34rem;
-  margin: 0.3rem 0 1.25rem;
+  grid-template-columns: minmax(18rem, 0.45fr) minmax(22rem, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
 }
 
-.system-steps span {
-  display: block;
+.system-steps {
+  counter-reset: system-step;
+  display: grid;
+  gap: 0.55rem;
+  max-width: 52rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.system-steps li {
+  counter-increment: system-step;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem;
+  align-items: start;
   padding: 0.65rem 0.8rem;
   color: var(--white);
   font-family: var(--font-display);
@@ -574,6 +596,11 @@ a {
   background: rgba(255, 255, 255, 0.14);
   border: 3px solid var(--white);
   box-shadow: 0.22rem 0.22rem 0 rgba(0, 0, 0, 0.18);
+}
+
+.system-steps li::before {
+  content: counter(system-step) ".";
+  min-width: 1.6rem;
 }
 
 .org-code {
@@ -798,6 +825,7 @@ a {
 
   .hero,
   .vote-band,
+  .process-section,
   .org-layout,
   .section-blue,
   .faq-section {
