@@ -165,6 +165,42 @@ const shortenArrowEnds = (orgChart) => {
   });
 };
 
+const positionStepArrows = () => {
+  const flow = document.querySelector(".system-flow");
+  const steps = [...document.querySelectorAll(".system-steps li")];
+  const arrows = [...document.querySelectorAll(".step-arrow")];
+
+  if (!flow || steps.length < 2 || arrows.length < 1) {
+    return;
+  }
+
+  const flowTop = flow.getBoundingClientRect().top;
+
+  arrows.forEach((arrow, index) => {
+    const from = steps[index];
+    const to = steps[index + 1];
+
+    if (!from || !to) {
+      return;
+    }
+
+    const fromRect = from.getBoundingClientRect();
+    const toRect = to.getBoundingClientRect();
+    const fromCenter = fromRect.top + fromRect.height / 2;
+    const toCenter = toRect.top + toRect.height / 2;
+    const top = fromCenter - flowTop - 4;
+    const height = Math.max(42, toCenter - fromCenter + 8);
+
+    arrow.style.top = `${top}px`;
+    arrow.style.height = `${height}px`;
+  });
+};
+
+positionStepArrows();
+window.addEventListener("resize", positionStepArrows);
+window.addEventListener("load", positionStepArrows);
+document.fonts?.ready.then(positionStepArrows);
+
 if (window.mermaid) {
   window.mermaid.initialize({
     startOnLoad: false,

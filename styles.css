@@ -570,11 +570,17 @@ a {
   align-items: start;
 }
 
+.system-flow {
+  position: relative;
+  width: min(100%, 46rem);
+}
+
 .system-steps {
   counter-reset: system-step;
+  position: relative;
+  z-index: 2;
   display: grid;
   gap: 0.55rem;
-  max-width: 52rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -601,6 +607,55 @@ a {
 .system-steps li::before {
   content: counter(system-step) ".";
   min-width: 1.6rem;
+}
+
+.step-arrow {
+  position: absolute;
+  z-index: 3;
+  width: clamp(3.2rem, 4.6vw, 4.6rem);
+  height: clamp(2.7rem, 3.8vw, 3.8rem);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.step-arrow path {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 3.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  marker-end: url("#step-arrowhead");
+  filter: drop-shadow(0.07rem 0.07rem 0 rgba(255, 255, 255, 0.32));
+}
+
+.step-arrow marker path {
+  fill: var(--ink);
+  stroke: none;
+  filter: none;
+}
+
+.step-arrow-right {
+  right: calc(-1 * clamp(3.2rem, 4.6vw, 4.6rem) + 0.2rem);
+}
+
+.step-arrow-left {
+  left: calc(-1 * clamp(3.2rem, 4.6vw, 4.6rem) + 0.2rem);
+}
+
+.step-arrow-1 {
+  top: 7.5%;
+}
+
+.step-arrow-2 {
+  top: 27.5%;
+}
+
+.step-arrow-3 {
+  top: 47.5%;
+}
+
+.step-arrow-4 {
+  top: 67.5%;
 }
 
 .org-code {
@@ -830,6 +885,11 @@ a {
   .section-blue,
   .faq-section {
     grid-template-columns: 1fr;
+  }
+
+  .system-flow {
+    justify-self: center;
+    width: calc(100% - 4rem);
   }
 
   .hero {
