@@ -904,6 +904,7 @@ a {
   .message-block {
     justify-self: center;
     order: -1;
+    margin-bottom: -4rem;
   }
 
   .hero-beaver {
@@ -949,6 +950,7 @@ a {
 
   .kicker {
     max-width: 10ch;
+    margin-bottom: 0.85rem;
   }
 
   .reasons-list {
@@ -959,6 +961,10 @@ a {
   .hero {
     gap: 0;
     padding-bottom: 3.5rem;
+  }
+
+  .message-block {
+    margin-bottom: -5.25rem;
   }
 
   .hero-beaver {
