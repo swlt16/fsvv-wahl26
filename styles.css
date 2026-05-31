@@ -135,6 +135,19 @@ a {
   border-radius: 50% 50% 0 0 / 75% 75% 0 0;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -18vw;
+  top: -15rem;
+  width: min(78rem, 92vw);
+  height: 24rem;
+  background: var(--purple);
+  border-radius: 0 0 50% 50% / 0 0 82% 82%;
+  transform: rotate(-2deg);
+}
+
 .kicker {
   margin: 0 0 1.4rem;
   font-size: clamp(2.2rem, 5vw, 4.4rem);
