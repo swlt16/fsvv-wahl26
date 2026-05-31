@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "FSVV wählen"
+  },
+  "nav": {
+    "aria": "Seitennavigation",
+    "brandAria": "FSVV Startseite",
+    "date": "am 23.+24. Juni wählen",
+    "links": ["Programm", "Die Wahl", "Unser System", "Deine Fachschaft", "FAQ"],
+    "languageAria": "Sprache wählen"
+  },
+  "hero": {
+    "kicker": "12 gute Gründe...",
+    "beaverAlt": "FSVV-Biber mit Megafon",
+    "reasons": [
+      "Wir vertreten alle <strong>Fachschaften</strong>",
+      "Wir sind <strong>basisdemokratisch</strong>",
+      "Wir sind <strong>unabhängig</strong>",
+      "Wir organisieren alle <strong>Clubhausfeste</strong>",
+      "Wir unterstützen das <strong>Ract!</strong>",
+      "Wir sind <strong>keine Burschis</strong>",
+      "Wir sind <strong>feministisch</strong>",
+      "Wir sind <strong>antifaschistisch</strong>",
+      "Wir sind rund ums <strong>Jahr aktiv</strong>",
+      "Wir sind offen für <strong>alle jederzeit</strong>",
+      "Wir haben <strong>Spaß</strong> in der Hochschulpolitik",
+      "Wir behalten <strong>alles im Blick</strong>",
+      "Wir haben <strong>Biber!!!</strong>"
+    ]
+  },
+  "electionCall": {
+    "stamp": "Am 23. & 24. Juni FSVV wählen",
+    "lede": "Wähl die Liste, die Entscheidungen zurück an die Studierenden bindet.",
+    "tagAria": "FSVV Schlagworte",
+    "tags": ["Basisdemokratisch", "Unabhängig", "Feministisch", "Antifaschistisch", "Fachschaftennah", "Transparent"],
+    "title": "Mach deine Stimme zur Stimme der Fachschaften."
+  },
+  "program": {
+    "eyebrow": "Was wir wollen",
+    "title": "Unser Wahlkampfprogramm",
+    "issues": [
+      {
+        "title": "Bezahlbares Studieren",
+        "text": "Wir wollen, dass Studienbedingungen bezahlbar bleiben und studentische Perspektiven bei Entscheidungen zählen."
+      },
+      {
+        "title": "Starke Fachschaften",
+        "text": "Fachschaften sind unsere Basis: Dort entstehen Themen, Anträge und die politische Rückkopplung in die Studiengänge."
+      },
+      {
+        "title": "Antifaschistische Hochschule",
+        "text": "Wir stehen für eine offene Universität, in der Diskriminierung und rechte Einschüchterung keinen Platz haben."
+      },
+      {
+        "title": "Offene Kultur",
+        "text": "Studentische Räume, Kultur und politische Bildung gehören zum Uni-Alltag und brauchen verlässliche Unterstützung."
+      }
+    ]
+  },
+  "timeline": {
+    "eyebrow": "So läuft es",
+    "title": "Dein Wahlfahrplan",
+    "items": [
+      {
+        "time": "Jetzt",
+        "title": "Informieren",
+        "text": "Informiere dich über die FSVV, unser System und deine Fachschaft."
+      },
+      {
+        "time": "Vor der Wahl",
+        "title": "Briefwahl beantragen",
+        "text": "Wenn du nicht vor Ort wählen kannst: <a href=\"#faq-briefwahl\">Briefwahl rechtzeitig beantragen</a> und entspannt abstimmen."
+      },
+      {
+        "time": "23. & 24. Juni",
+        "title": "FSVV wählen",
+        "text": "Stimme abgeben, <a href=\"#faq-wahllokal\">dein Wahllokal finden</a> und Freund*innen daran erinnern: Mitbestimmung lebt vom Mitmachen."
+      }
+    ]
+  },
+  "org": {
+    "eyebrow": "Wie wir arbeiten",
+    "title": "Unser System",
+    "paragraphs": [
+      "Die Fachschaftenvollversammlung ist die unabhängige Studierendenvertretung an der Uni Tübingen. Seit den 1970er-Jahren bringen Fachschaften dort Themen aus Studium, Uni-Alltag und Gremien zusammen.",
+      "Jeden Montag beraten Delegierte aus den Fachschaften im Klubhaus. Beschlüsse werden gemeinsam und offen gefasst; Vertreter*innen in Studierendenrat und Senat sind an diese Entscheidungen gebunden."
+    ],
+    "defaultDetail": {
+      "kicker": "Anklicken",
+      "title": "Element im Organigramm wählen",
+      "text": "Klicke auf einen Knoten im Organigramm, um zu sehen, wie Mitbestimmung bei uns weitergegeben wird."
+    },
+    "details": {
+      "Studierende": {
+        "kicker": "Basis",
+        "title": "Alle Studierende",
+        "text": "Alle Studierenden können Themen in ihre Fachschaften tragen, mitdiskutieren und so studentische Selbstverwaltung mitprägen."
+      },
+      "Fachschaften": {
+        "kicker": "Vertretung",
+        "title": "Fachschaften",
+        "text": "Bis zu zwei Delegierte pro Fachschaft kommen montags in die FSVV. Themen werden aus der FSVV zurück in die Fachschaften getragen und dort offen besprochen."
+      },
+      "FSVV": {
+        "kicker": "Zusammenhang",
+        "title": "FSVV",
+        "text": "Die FSVV ist unabhängig, basisdemokratisch und nicht parteipolitisch. Sie bündelt Perspektiven der Fachschaften und fasst gemeinsame Beschlüsse."
+      },
+      "StuRa": {
+        "kicker": "Gremium",
+        "title": "Studierendenrat",
+        "text": "Vertreter*innen im Studierendenrat sind an FSVV-Beschlüsse gebunden und stimmen dort so ab, wie es zuvor gemeinsam entschieden wurde."
+      },
+      "Senat": {
+        "kicker": "Universität",
+        "title": "Senat der Universität",
+        "text": "Auch im Senat sollen studentische Stimmen nachvollziehbar aus den Fachschaften und der FSVV kommen, statt losgelöst von der Basis zu entscheiden."
+      }
+    },
+    "labels": {
+      "Studierende": "Alle Studierende",
+      "Fachschaften": "Fachschaften",
+      "FSVV": "Fachschaftenvollversammlung",
+      "StuRa": "Studierendenrat",
+      "Senat": "Senat der Universität"
+    },
+    "primaryLabels": ["Alle Studierende", "Fachschaften", "Fachschaftenvollversammlung", "Fachschaften-vollversammlung", "Fachschaften-vollversammlung(FSVV)"]
+  },
+  "process": {
+    "eyebrow": "So entsteht ein Mandat",
+    "title": "Vom Antrag zur Abstimmung",
+    "stepsAria": "So läuft Mitbestimmung in der FSVV",
+    "steps": [
+      "Ein Antrag landet in der FSVV: aus den Fachschaften oder aus dem StuRa",
+      "Die FSVV berät den Antrag und gibt ihn in die Fachschaften",
+      "Studierende diskutieren und entscheiden in ihren Fachschaften",
+      "Delegierte bringen die Rückmeldungen wieder in die FSVV",
+      "Unsere Mandatsträger*innen stimmen im StuRa danach ab"
+    ]
+  },
+  "faculty": {
+    "stamp": "Aus den Fächern, für die Fächer",
+    "title": "Deine Fachschaft ist der Anfang",
+    "paragraphs": [
+      "Deine Fachschaft kennt den Alltag in deinem Studiengang: Prüfungschaos, überfüllte Seminare, Erstiprogramm, Beratung, Clubhausfeste und die kleinen Probleme, die sonst gern untergehen. Genau deshalb basiert unser System auf den Fachschaften. Was in den Fachbereichen passiert, wird in die FSVV getragen und gemeinsam weitergedacht.",
+      "Die FSVV wiederum gibt den Fachschaften, die vor Ort in den Fächern für ein gutes Studium sorgen, die nötige Stimme in der Hochschulpolitik."
+    ]
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": {
+      "vote": {
+        "summary": "Wer darf wählen?",
+        "text": "Alle immatrikulierten Studierenden der Uni Tübingen können studentische Vertreter*innen wählen."
+      },
+      "mail": {
+        "summary": "Wie beantrage ich Briefwahl?",
+        "text": "Briefwahlunterlagen kannst du online beantragen. Laut Uni geht das bis zum 16. Juni 2026, allerdings nur aus dem Uni-Netz. Falls du nicht im Uni-WLAN bist, musst du eduVPN benutzen.",
+        "button": "Briefwahl beantragen"
+      },
+      "location": {
+        "summary": "Wo kann ich an den Wahltagen wählen?",
+        "intro": "Die Wahllokale sind am 23. und 24. Juni 2026 jeweils von 9 bis 17 Uhr geöffnet. Dein Wahlraum richtet sich nach Fakultät bzw. Studiengang:",
+        "locations": [
+          "<strong>Clubhaus:</strong> Ev. Theologie, Kath. Theologie, Jura, Wirtschafts- und Sozialwissenschaften, Zentrum für Islamische Theologie, Zahnmedizin sowie Psychologie und bestimmte Geowissenschaften.",
+          "<strong>Brecht-Bau, Eingangshalle:</strong> Philosophische Fakultät und Leibniz Kolleg.",
+          "<strong>Hörsaalzentrum Morgenstelle, Foyer:</strong> Biologie, Chemie, Informatik, Mathematik, Pharmazie, Biochemie, Physik und die übrigen Geowissenschaften.",
+          "<strong>CRONA, Eingangshalle vor Hörsaal 210:</strong> Medizinische Fakultät außer Zahnmedizin."
+        ],
+        "note": "Alle Angaben ohne Gewähr! Genauere Infos findest du hier:",
+        "button": "Uni-Website zur Wahl"
+      },
+      "work": {
+        "summary": "Was macht die FSVV konkret?",
+        "text": "Die FSVV ist der Zusammenschluss der Fachschaften. Dort werden Themen offen diskutiert, in die Fachschaften zurückgetragen und anschließend gemeinsam beschlossen."
+      },
+      "beaver": {
+        "summary": "Wer steckt unter dem Biberkostüm?",
+        "text": "Das bleibt ein kleines Wahlkampfgeheimnis. Sicher ist nur: Der Biber kandidiert nicht selbst, er macht lediglich auf die Wahl aufmerksam und taucht immer dann auf, wenn die Hochschulpolitik ihn braucht. Alles Weitere ist Legende."
+      },
+      "candidates": {
+        "summary": "Wen genau wähle ich?",
+        "intro": "Bei der FSVV steht weniger die einzelne Person im Vordergrund als das gemeinsame Mandat. Unsere Vertreter*innen sind an die Beschlüsse der Fachschaftenvollversammlung gebunden. Über dieses imperative Mandat sollen möglichst viele Studierende aus den Fachschaften an der Entscheidungsfindung beteiligt werden, statt dass einzelne Gewählte losgelöst abstimmen.",
+        "hint": "Falls du trotzdem wissen möchtest, wer auf den Listen steht:",
+        "sturaTitle": "Studierendenrat",
+        "senateTitle": "Senat",
+        "stura": [
+          "Sebastian Walter (Informatik)",
+          "Merit Tiede (Geo-Umwi)",
+          "Felix Stähle (Philosophie)",
+          "Emma-Luna Riegsinger (Internationale Literaturen)",
+          "Luis-Pascal Mack (Bioinformatik)",
+          "Lea Barth (Rhetorik)",
+          "Finn Schwarz (Politikwissenschaft)",
+          "Kim Scharfenberg (Politikwissenschaft)",
+          "Marcel Eichinger (Physik)",
+          "Laura Trefftz (Biochemie)",
+          "Yannick Decker (Philosophie)",
+          "Puma (Soziologie)",
+          "Jannis Dennochweiler (Politikwissenschaft)",
+          "Alicia Reinbold (Philosophie)",
+          "Alexander Phi. Goetz (Informatik)",
+          "Emily Lechner (Politikwissenschaft)",
+          "Linus Szillat (Kognitionswissenschaft)",
+          "Alina (Geschichte)",
+          "Max Bergmann (Chemie)",
+          "Esther (Geschichte)"
+        ],
+        "senate": [
+          "Laura Trefftz (Biochemie)",
+          "Finn Schwarz (Politikwissenschaft)",
+          "Henrike Koscharre (Wirtschaftswissenschaft)",
+          "Simon Belka (Philosophie)",
+          "Merit Tiede (Geo-Umwi)",
+          "Luis-Pascal Mack (Bioinformatik)",
+          "Puma (Soziologie)",
+          "Jannis Dennochweiler (Politikwissenschaft)",
+          "Alicia Reinbold (Philosophie)",
+          "Yannick Decker (Philosophie)",
+          "Emily Lechner (Politikwissenschaft)",
+          "Linus Szillat (Kognitionswissenschaft)"
+        ]
+      }
+    }
+  }
+}

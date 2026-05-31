@@ -18,6 +18,10 @@
           </a>
           <p>am 23.+24. Juni wählen</p>
         </div>
+        <div class="language-switch" aria-label="Sprache wählen">
+          <button type="button" data-lang="de" aria-pressed="true">DE</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
         <div class="nav-links">
           <a href="#programm">Programm</a>
           <a href="#wahl">Die Wahl</a>
@@ -145,7 +149,7 @@
               <p id="orgDetailText">Klicke auf einen Knoten im Organigramm, um zu sehen, wie Mitbestimmung bei uns weitergegeben wird.</p>
             </article>
           </div>
-          <pre class="mermaid org-chart">
+          <pre class="org-chart" id="orgChart" aria-label="Organigramm">
 flowchart TB
   Studierende["Alle Studierende"]
   Fachschaften["Fachschaften"]

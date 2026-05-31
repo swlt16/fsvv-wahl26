@@ -48,9 +48,9 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(8rem, auto) auto minmax(18rem, 1fr);
   align-items: center;
-  justify-content: space-between;
   gap: 1.25rem;
   padding: clamp(0.75rem, 2vw, 1.4rem) clamp(1rem, 4vw, 3rem);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
@@ -93,8 +93,16 @@ a {
   gap: 0.55rem;
 }
 
+.language-switch {
+  display: flex;
+  justify-self: center;
+  gap: 0.35rem;
+}
+
 .nav-links a,
+.language-switch button,
 .action-list a {
+  background: transparent;
   color: var(--white);
   text-decoration: none;
   font-weight: 900;
@@ -107,10 +115,21 @@ a {
 
 .nav-links a:hover,
 .nav-links a:focus-visible,
+.language-switch button:hover,
+.language-switch button:focus-visible,
 .action-list a:hover,
 .action-list a:focus-visible {
   transform: translate(-0.12rem, -0.12rem);
   box-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.18);
+}
+
+.language-switch button {
+  cursor: pointer;
+}
+
+.language-switch button[aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--white);
 }
 
 .hero {
@@ -908,7 +927,9 @@ a {
 @media (max-width: 860px) {
   .topbar {
     position: absolute;
+    grid-template-columns: minmax(7rem, auto) auto minmax(9rem, 1fr);
     align-items: flex-start;
+    gap: 0.75rem;
   }
 
   .nav-links {
@@ -918,6 +939,15 @@ a {
   .nav-links a {
     font-size: 0.85rem;
     padding: 0.45rem 0.55rem;
+  }
+
+  .language-switch {
+    align-self: flex-start;
+  }
+
+  .language-switch button {
+    padding: 0.45rem 0.5rem;
+    font-size: 0.85rem;
   }
 
   .hero,

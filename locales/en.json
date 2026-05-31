@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "Vote FSVV"
+  },
+  "nav": {
+    "aria": "Page navigation",
+    "brandAria": "FSVV homepage",
+    "date": "vote on June 23+24",
+    "links": ["Platform", "The Election", "Our System", "Your Student Council", "FAQ"],
+    "languageAria": "Choose language"
+  },
+  "hero": {
+    "kicker": "12 good reasons...",
+    "beaverAlt": "FSVV beaver with megaphone",
+    "reasons": [
+      "We represent all <strong>Student Councils</strong>",
+      "We are <strong>grassroots-democratic</strong>",
+      "We are <strong>independent</strong>",
+      "We organize <strong>Clubhaus parties</strong>",
+      "We support <strong>Ract!</strong>",
+      "We are <strong>not fraternity people</strong>",
+      "We are <strong>feminist</strong>",
+      "We are <strong>antifascist</strong>",
+      "We are active <strong>all year round</strong>",
+      "We are open to <strong>everyone, anytime</strong>",
+      "We have <strong>fun</strong> in university politics",
+      "We keep <strong>an eye on everything</strong>",
+      "We have <strong>beavers!!!</strong>"
+    ]
+  },
+  "electionCall": {
+    "stamp": "Vote FSVV on June 23 & 24",
+    "lede": "Vote for the list that ties decisions back to students.",
+    "tagAria": "FSVV keywords",
+    "tags": ["Grassroots-democratic", "Independent", "Feminist", "Antifascist", "Close to departments", "Transparent"],
+    "title": "Turn your vote into the voice of the Student Councils."
+  },
+  "program": {
+    "eyebrow": "What we stand for",
+    "title": "Our campaign platform",
+    "issues": [
+      {
+        "title": "Affordable studying",
+        "text": "We want study conditions to remain affordable and student perspectives to count in decision-making."
+      },
+      {
+        "title": "Strong Student Councils",
+        "text": "Student Councils are our basis: this is where issues, motions and political feedback from degree programs emerge."
+      },
+      {
+        "title": "Antifascist university",
+        "text": "We stand for an open university where discrimination and right-wing intimidation have no place."
+      },
+      {
+        "title": "Open culture",
+        "text": "Student spaces, culture and political education belong in everyday university life and need reliable support."
+      }
+    ]
+  },
+  "timeline": {
+    "eyebrow": "How it works",
+    "title": "Your election roadmap",
+    "items": [
+      {
+        "time": "Now",
+        "title": "Get informed",
+        "text": "Learn about the FSVV, our system and your Student Council."
+      },
+      {
+        "time": "Before the election",
+        "title": "Request postal voting",
+        "text": "If you cannot vote in person: <a href=\"#faq-briefwahl\">request postal voting in time</a> and vote without stress."
+      },
+      {
+        "time": "June 23 & 24",
+        "title": "Vote FSVV",
+        "text": "Cast your vote, <a href=\"#faq-wahllokal\">find your polling place</a> and remind your friends: participation lives from people taking part."
+      }
+    ]
+  },
+  "org": {
+    "eyebrow": "How we work",
+    "title": "Our System",
+    "paragraphs": [
+      "The Fachschaftenvollversammlung is the independent student representation at the University of Tübingen. Since the 1970s, Student Councils have brought together issues from studies, everyday university life and committees there.",
+      "Every Monday, delegates from the Student Councils meet in the Klubhaus. Decisions are discussed and made collectively and openly; representatives in the Studierendenrat and Senat are bound by these decisions."
+    ],
+    "defaultDetail": {
+      "kicker": "Click",
+      "title": "Choose an element in the chart",
+      "text": "Click a node in the chart to see how participation is passed on in our system."
+    },
+    "details": {
+      "Studierende": {
+        "kicker": "Basis",
+        "title": "All students",
+        "text": "All students can bring issues to their Student Councils, join discussions and help shape student self-governance."
+      },
+      "Fachschaften": {
+        "kicker": "Representation",
+        "title": "Student Councils",
+        "text": "Up to two delegates per Student Council come to the FSVV on Mondays. Issues are carried back from the FSVV into the Student Councils and discussed openly there."
+      },
+      "FSVV": {
+        "kicker": "Connection",
+        "title": "FSVV",
+        "text": "The FSVV is independent, grassroots-democratic and not party-political. It brings together the perspectives of the Student Councils and adopts joint decisions."
+      },
+      "StuRa": {
+        "kicker": "Committee",
+        "title": "Studierendenrat",
+        "text": "Representatives in the Studierendenrat are bound by FSVV decisions and vote there as previously decided collectively."
+      },
+      "Senat": {
+        "kicker": "University",
+        "title": "Senat",
+        "text": "In the Senat, too, student voices should come transparently from the Student Councils and the FSVV instead of being detached from the basis."
+      }
+    },
+    "labels": {
+      "Studierende": "Students",
+      "Fachschaften": "Student Councils",
+      "FSVV": "Fachschaftenvollversammlung",
+      "StuRa": "Studierendenrat",
+      "Senat": "Senat"
+    },
+    "primaryLabels": ["Students", "Student Councils", "Fachschaftenvollversammlung", "Fachschaften-vollversammlung"]
+  },
+  "process": {
+    "eyebrow": "How a mandate is formed",
+    "title": "From motion to vote",
+    "stepsAria": "How participation works in the FSVV",
+    "steps": [
+      "A motion reaches the FSVV: from the Student Councils or from the Studierendenrat",
+      "The FSVV discusses the motion and passes it on to the Student Councils",
+      "Students discuss and decide in their Student Councils",
+      "Delegates bring the feedback back to the FSVV",
+      "Our mandate holders then vote accordingly in the Studierendenrat"
+    ]
+  },
+  "faculty": {
+    "stamp": "From the subjects, for the subjects",
+    "title": "Your Student Council is the starting point",
+    "paragraphs": [
+      "Your Student Council knows everyday life in your degree program: exam chaos, overcrowded seminars, first-semester orientation, advice, Clubhaus parties and the small problems that otherwise tend to disappear. That is exactly why our system is based on the Student Councils. What happens in the departments is carried into the FSVV and developed collectively.",
+      "In turn, the FSVV gives the Student Councils, which work locally for good study conditions, the voice they need in university politics."
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "vote": {
+        "summary": "Who can vote?",
+        "text": "All enrolled students at the University of Tübingen can vote for student representatives."
+      },
+      "mail": {
+        "summary": "How do I request postal voting?",
+        "text": "You can request postal voting documents online. According to the university, this is possible until June 16, 2026, but only from the university network. If you are not using university Wi-Fi, you need to use eduVPN.",
+        "button": "Request postal voting"
+      },
+      "location": {
+        "summary": "Where can I vote on election days?",
+        "intro": "Polling places are open on June 23 and 24, 2026, from 9:00 to 17:00. Your polling place depends on your faculty or degree program:",
+        "locations": [
+          "<strong>Clubhaus:</strong> Protestant Theology, Catholic Theology, Law, Economics and Social Sciences, Center for Islamic Theology, Dentistry, Psychology and selected geosciences.",
+          "<strong>Brecht-Bau, entrance hall:</strong> Faculty of Humanities and Leibniz Kolleg.",
+          "<strong>Lecture Hall Center Morgenstelle, foyer:</strong> Biology, Chemistry, Computer Science, Mathematics, Pharmacy, Biochemistry, Physics and the other geosciences.",
+          "<strong>CRONA, entrance hall in front of lecture hall 210:</strong> Faculty of Medicine except Dentistry."
+        ],
+        "note": "No guarantee for these details. You can find more precise information here:",
+        "button": "University election website"
+      },
+      "work": {
+        "summary": "What does the FSVV actually do?",
+        "text": "The FSVV is the association of Student Councils. Issues are discussed openly there, carried back into the Student Councils and then decided collectively."
+      },
+      "beaver": {
+        "summary": "Who is inside the beaver costume?",
+        "text": "That remains a small campaign secret. What is certain: the beaver is not running for office itself; it simply draws attention to the election and appears whenever university politics needs it. Everything else is legend."
+      },
+      "candidates": {
+        "summary": "Who exactly am I voting for?",
+        "intro": "With the FSVV, the individual person matters less than the shared mandate. Our representatives are bound by the decisions of the Fachschaftenvollversammlung. Through this imperative mandate, as many students from the Student Councils as possible should be involved in decision-making instead of individual elected representatives voting independently.",
+        "hint": "If you still want to know who is on the lists:",
+        "sturaTitle": "Studierendenrat",
+        "senateTitle": "Senat",
+        "stura": [
+          "Sebastian Walter (Computer Science)",
+          "Merit Tiede (Geoenvironmental Sciences)",
+          "Felix Stähle (Philosophy)",
+          "Emma-Luna Riegsinger (International Literatures)",
+          "Luis-Pascal Mack (Bioinformatics)",
+          "Lea Barth (Rhetoric)",
+          "Finn Schwarz (Political Science)",
+          "Kim Scharfenberg (Political Science)",
+          "Marcel Eichinger (Physics)",
+          "Laura Trefftz (Biochemistry)",
+          "Yannick Decker (Philosophy)",
+          "Puma (Sociology)",
+          "Jannis Dennochweiler (Political Science)",
+          "Alicia Reinbold (Philosophy)",
+          "Alexander Phi. Goetz (Computer Science)",
+          "Emily Lechner (Political Science)",
+          "Linus Szillat (Cognitive Science)",
+          "Alina (History)",
+          "Max Bergmann (Chemistry)",
+          "Esther (History)"
+        ],
+        "senate": [
+          "Laura Trefftz (Biochemistry)",
+          "Finn Schwarz (Political Science)",
+          "Henrike Koscharre (Economics and Business Administration)",
+          "Simon Belka (Philosophy)",
+          "Merit Tiede (Geoenvironmental Sciences)",
+          "Luis-Pascal Mack (Bioinformatics)",
+          "Puma (Sociology)",
+          "Jannis Dennochweiler (Political Science)",
+          "Alicia Reinbold (Philosophy)",
+          "Yannick Decker (Philosophy)",
+          "Emily Lechner (Political Science)",
+          "Linus Szillat (Cognitive Science)"
+        ]
+      }
+    }
+  }
+}
