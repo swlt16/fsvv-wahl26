@@ -123,18 +123,6 @@ a {
   padding: clamp(6.5rem, 12vw, 10rem) clamp(1.25rem, 5vw, 4.2rem) 8rem;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  right: -10vw;
-  bottom: -8rem;
-  width: min(72rem, 78vw);
-  height: 18rem;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 50% 50% 0 0 / 75% 75% 0 0;
-}
-
 .hero::before {
   content: "";
   position: absolute;
@@ -968,6 +956,25 @@ a {
     padding-top: 13rem;
   }
 
+  .wave {
+    left: 50%;
+    width: 190vw;
+    transform: translateX(-50%);
+  }
+
+  .vote-band::after,
+  .poster-section::after,
+  .faq-section::after {
+    bottom: -15rem;
+    width: 190vw;
+    height: 19rem;
+  }
+
+  .faq-section::after {
+    top: -5.5rem;
+    bottom: auto;
+  }
+
   .vote-copy {
     padding-left: 0;
   }
@@ -1036,6 +1043,23 @@ a {
   .vote-band {
     margin-top: -13rem;
     padding-top: 14rem;
+  }
+
+  .wave {
+    width: 205vw;
+  }
+
+  .vote-band::after,
+  .poster-section::after,
+  .faq-section::after {
+    bottom: -16.25rem;
+    width: 205vw;
+    height: 20rem;
+  }
+
+  .faq-section::after {
+    top: -4.75rem;
+    bottom: auto;
   }
 
   .vote-card {
