@@ -340,6 +340,53 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", positionStepArrows);
 document.fonts?.ready.then(positionStepArrows);
 
+const openFaqFromHash = (hash, shouldScroll = true) => {
+  if (!hash || !hash.startsWith("#faq-")) {
+    return;
+  }
+
+  const target = document.querySelector(hash);
+
+  if (!(target instanceof HTMLDetailsElement)) {
+    return;
+  }
+
+  document.querySelectorAll(".faq-list details").forEach((details) => {
+    if (details !== target) {
+      details.open = false;
+    }
+  });
+
+  target.open = true;
+
+  if (shouldScroll) {
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  }
+};
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest('a[href^="#faq-"]');
+
+  if (!link) {
+    return;
+  }
+
+  const hash = link.getAttribute("href");
+
+  if (!hash) {
+    return;
+  }
+
+  event.preventDefault();
+  history.pushState(null, "", hash);
+  openFaqFromHash(hash);
+});
+
+window.addEventListener("hashchange", () => openFaqFromHash(window.location.hash));
+openFaqFromHash(window.location.hash, false);
+
 if (window.mermaid) {
   window.mermaid.initialize({
     startOnLoad: false,

@@ -434,6 +434,18 @@ a {
   font-weight: 800;
 }
 
+.timeline p a {
+  color: inherit;
+  font-weight: 900;
+  text-decoration-thickness: 0.16em;
+  text-underline-offset: 0.18em;
+}
+
+.timeline p a:hover,
+.timeline p a:focus-visible {
+  text-decoration-style: wavy;
+}
+
 .timeline {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
